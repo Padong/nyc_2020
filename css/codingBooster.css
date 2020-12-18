@@ -1,0 +1,252 @@
+/* 전체 영역을 토틀어서 스타일 정의*/
+@import url(http://fonts.googleapis.com/earlyaccess/namumgothic.css);
+*{
+	font-family: 'Nanum Gothic';
+}
+h3, h4, h5 {
+	text-align: center;
+	border: black;
+	font-size: 2.5rem;
+}
+a {
+	color: #000000;
+	text-decoration: none;
+}
+a:hover {
+	color: #bbbbbb;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* 내비게이션 영역 */
+.navbar-default { /* 배경 색상 */
+	background-color: #000000;
+	border-color:#000000;
+}
+.navbar-default .navbar-brand {/* 내비게이션 제목 색상 */
+	color: #ffffff;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+	background-color: transparent;
+	color: #bbbbbb;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus { /* 현재 선택된 내비게이션 색상 이벤트 */
+	color: white;
+	background-color: #000000;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus { /* 내비게이션 글자에 마우스를 올렸을 때 */
+	color: #bbbbbb;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus { /* 드랍다운이 열렸을 때 마우스 색상 이벤트 */
+	color: #000000;
+	background-color: #ffffff;
+	text-decoration: none;
+}
+.navbar-default .navbar-nav > li > a { /* 내비게이션 기본 색상 */
+	color:white;
+}
+@media (max-width: 767px) { /* 해상도가 작을 때 드랍다운 아이템에 마우스를 올렸을 때 */
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+		color: #ffffff;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+		color: #bbbbbb;
+	}
+}
+
+.textarea_test {
+	resize:none;
+	line-height:30px;
+	width:1000px;
+	overflow-y:hidden;
+	height:50px;
+	border:1px solid #ccc;
+}
+.image-box {
+	width: 100%;
+	height: 300px;
+}
+.image-box:hover {
+	transform: rotatey(200deg);
+}
+
+.scene1 {
+	width: 300px;
+	height: 200px;
+	border: 1px solid #CCC;
+	margin: 80px;
+	perspective: 400px;
+	position: center;
+}
+
+.box1 {
+	width: 300px;
+	height: 300px;
+	position: relative;
+	transform-style: preserve-3d;
+	transform: translateZ(-50px);
+	transition: transform 1s;
+}
+
+.box1:hover {
+	animation: spin 10s infinite;
+}
+.face1 {
+	position: absolute;
+	border: 2px solid black;
+	font-size: 40px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	backface-visibility: visible;
+	opacity: 0.7;
+}
+
+.face_front1,
+.face_back1 {
+	width: 300px;
+	height: 300px;
+	line-height: 300px;
+}
+
+.face_right1,
+.face_left1 {
+	width: 300px;
+	height: 300px;
+	left: 300px;
+	line-height: 300px;
+}
+
+.face_top1,
+.face_bottom1 {
+	width: 300px;
+	height: 300px;
+	top: 150px;
+	line-height: 300px;
+}
+
+.face_front1  {
+	background: #F16F65;
+	transform: rotateY(  0deg) translateX(180px) translateZ( 150px);
+}
+.face_back1  {
+	background: #9EFB81;
+	transform: rotateY(180deg) translateX(-180px)  translateZ( 150px);
+}
+.face_right1   {
+	background: #FFFE87;
+	transform: rotateY( 90deg)  translateZ(-270px);
+}
+.face_left1   {
+	background: #9DFCFE;
+	transform: rotateY(-90deg)  translateZ(-30px);
+}
+.face_top1    {
+	background: #4C65F8;
+	transform: rotateX( 90deg) translateX(180px)  translateZ(300px);
+}
+.face_bottom1 {
+	background: #F078F9;
+	transform: rotateX(-90deg) translateX(180px) translateZ(0px);
+}
+
+@keyframes spin {
+	0% { transform: translateZ(-50px) rotateX(  0deg) rotateY(  0deg); }
+	100% { transform: translateZ(-50px) rotateX(360deg) rotateY(360deg); }
+}
+
+
+
+.scene {
+	width: 300px;
+	height: 200px;
+	border: 1px solid #CCC;
+	margin: 80px;
+	perspective: 400px;
+}
+
+.box {
+	width: 300px;
+	height: 200px;
+	position: relative;
+	transform-style: preserve-3d;
+	transform: translateZ(-50px);
+	transition: transform 1s;
+}
+
+.box:hover {
+	animation: spin 10s infinite;
+	transform: rotateY(180deg);
+}
+.face {
+	position: absolute;
+	border: 2px solid black;
+	font-size: 40px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	backface-visibility: visible;
+	opacity: 0.7;
+}
+
+.face_front,
+.face_back {
+	width: 300px;
+	height: 200px;
+	line-height: 200px;
+}
+
+.face_right,
+.face_left {
+	width: 100px;
+	height: 200px;
+	left: 100px;
+	line-height: 200px;
+}
+
+.face_top,
+.face_bottom {
+	width: 300px;
+	height: 100px;
+	top: 50px;
+	line-height: 100px;
+}
+
+.face_front  {
+	background: #F16F65;
+	transform: rotateY(  0deg) translateZ( 50px);
+}
+.face_back  {
+	background: #9EFB81;
+	transform: rotateY(180deg) translateZ( 50px);
+}
+.face_right   {
+	background: #FFFE87;
+	transform: rotateY( 90deg) translateZ(150px);
+}
+.face_left   {
+	background: #9DFCFE;
+	transform: rotateY(-90deg) translateZ(150px);
+}
+.face_top    {
+	background: #4C65F8;
+	transform: rotateX( 90deg) translateZ(100px);
+}
+.face_bottom {
+	background: #F078F9;
+	transform: rotateX(-90deg) translateZ(100px);
+}
+.round-img {
+	position: relative; height: 24px;
+}
+.round-img img {
+	position: absolute; right: 0; bottom: 0;
+	border-radius: 70%;
+}
